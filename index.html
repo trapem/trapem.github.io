@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>TRAPEM HANDBALL CLUB - ESTADO SOCIOS</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+            function checkSocio() {
+                var check = parseInt(document.getElementById('dni').value);
+                alert(check);
+                var socios = [
+                    34666231,
+                    36626624
+                ]
+                if (socios.includes(check)) {
+                    alert("El socio esta al dia , tiene permitido el acceso")
+                } else {
+                    alert("El socio no esta al dia o no esta inscripto. Por favor consultar con la administracion del club.")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="col-lg-6">
+            <h1>INGRESE EL DNI DEL SOCIO PARA CONSULTAR SU ESTADO</h1>
+            <input type="number" name="dni" id="dni">
+            <input type="button" name="consulta" value="Consultar" onclick="checkSocio();">
+        </div>
+
+    </body>
+
+</html>
